@@ -2,9 +2,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:cafe_burrito/app.dart';
 import 'package:cafe_burrito/core/theme/app_colors.dart';
+import 'package:cafe_burrito/features/cafe/presentation/app_shell.dart';
 import 'package:cafe_burrito/features/hud/presentation/currency_pill.dart';
 
 void main() {
+  testWidgets('Bundled fonts are configured in theme', (tester) async {
+    await tester.pumpWidget(const CafeBurritoApp());
+
+    final BuildContext context = tester.element(find.byType(AppShell));
+    final textTheme = Theme.of(context).textTheme;
+
+    expect(textTheme.displayLarge?.fontFamily, 'LilitaOne');
+    expect(textTheme.bodyMedium?.fontFamily, 'Nunito');
+  });
+
   testWidgets('App shell displays nav items and HUD amounts', (tester) async {
     await tester.pumpWidget(const CafeBurritoApp());
 

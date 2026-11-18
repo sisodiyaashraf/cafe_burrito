@@ -1,7 +1,7 @@
 # Architecture and coding rules
 
 ## Stack
-Flutter, flame, provider, hive and hive_flutter, google_fonts, flame_audio, google_mobile_ads, in_app_purchase (the last three are added in their own steps).
+Flutter, flame, provider, hive and hive_flutter, flame_audio, google_mobile_ads, in_app_purchase (the last three are added in their own steps). Fonts are bundled in assets/fonts/ and declared in pubspec.yaml.
 
 ## Structure (Clean Architecture)
 lib/

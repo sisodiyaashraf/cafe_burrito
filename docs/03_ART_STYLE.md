@@ -35,4 +35,4 @@ Examples: room_espresso_bar.png, barista_body.png, item_cappuccino.png, ui_coin.
 One asset per image, plain white background, same style-lock text every time, remove background after generation, defringe edges, check outline thickness consistency.
 
 ## Fonts
-Display and numbers: Lilita One. Body: Nunito. Both from google_fonts.
+Display and numbers: Lilita One. Body: Nunito. Both bundled in assets/fonts/ and declared in pubspec.yaml.

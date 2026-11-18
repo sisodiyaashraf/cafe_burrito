@@ -5,6 +5,17 @@
 (Update this checklist after every step. Add notes about decisions and known issues below.)
 
 ## Notes
+### Step 2.5 Decisions & Details
+- Fonts bundled offline in `assets/fonts/` and declared in `pubspec.yaml`:
+  - `assets/fonts/LilitaOne-Regular.ttf` (family: `LilitaOne`)
+  - `assets/fonts/Nunito-Regular.ttf` (family: `Nunito`, weight: 400)
+  - `assets/fonts/Nunito-SemiBold.ttf` (family: `Nunito`, weight: 600)
+  - `assets/fonts/Nunito-Bold.ttf` (family: `Nunito`, weight: 700)
+  - `assets/fonts/Nunito-ExtraBold.ttf` (family: `Nunito`, weight: 800)
+  - License files preserved in `assets/fonts/licenses/` (`Lilita_One/OFL.txt`, `Nunito/OFL.txt`, `OFL-LilitaOne.txt`, `OFL-Nunito.txt`).
+- Network font package completely removed from project dependencies and codebase.
+- Theme text styles updated to direct `TextStyle(fontFamily: ...)` references.
+
 ### Step 2 Decisions & Details
 - Added `lib/core/widgets/` for reusable widgets (`AssetImageWithFallback`, `PlaceholderPanel`) and updated `docs/04_ARCHITECTURE_AND_RULES.md` structure list.
 - Currency icon colors in HUD:
@@ -20,7 +31,7 @@
   - `provider`: 6.1.5+1 (^6.1.5+1)
   - `hive`: 2.2.3 (^2.2.3)
   - `hive_flutter`: 1.1.0 (^1.1.0)
-  - `google_fonts`: 8.2.1 (^8.2.1)
+  - Bundled offline fonts (`LilitaOne`, `Nunito`)
   - Dev dependencies retained: `flutter_test` (sdk: flutter), `flutter_lints` (^6.0.0)
 - Decisions:
   - Extracted `PaletteSwatches` into `lib/features/cafe/presentation/palette_swatches.dart` to keep both `setup_check_screen.dart` and the swatch widget well under 100 lines.
