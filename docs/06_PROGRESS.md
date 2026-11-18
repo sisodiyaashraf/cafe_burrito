@@ -1,9 +1,19 @@
 # Progress
 - [x] Step 0: Documentation
 - [x] Step 1: Project setup
+- [x] Step 2: App shell, bottom navigation, HUD
 (Update this checklist after every step. Add notes about decisions and known issues below.)
 
 ## Notes
+### Step 2 Decisions & Details
+- Added `lib/core/widgets/` for reusable widgets (`AssetImageWithFallback`, `PlaceholderPanel`) and updated `docs/04_ARCHITECTURE_AND_RULES.md` structure list.
+- Currency icon colors in HUD:
+  - Coins: `AppColors.caramel` (warm gold tone) with `Icons.monetization_on_rounded`.
+  - Golden Beans: `AppColors.berry` (vibrant premium tone) with `Icons.coffee_rounded`.
+  This pair provides the highest contrast and distinction on the cream pill background.
+- Wrapped `PlaceholderPanel` in `SingleChildScrollView` to guarantee zero overflow on tiny 320x480 screens even at 1.5x text scale.
+- TODO for Step 4: Replace temporary HUD values (`coins = 1250000`, `goldenBeans = 12` in `lib/features/cafe/presentation/app_shell.dart`) with dynamic Provider game state.
+
 ### Step 1 Decisions & Versions
 - Packages added:
   - `flame`: 1.35.1 (^1.35.1)

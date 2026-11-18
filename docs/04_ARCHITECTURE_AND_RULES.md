@@ -7,7 +7,7 @@ Flutter, flame, provider, hive and hive_flutter, google_fonts, flame_audio, goog
 lib/
   main.dart
   app.dart
-  core/{constants,theme,utils,ads,audio}
+  core/{constants,theme,utils,widgets,ads,audio}
   features/
     cafe/{domain,data,presentation}
     menu/{domain,data}

@@ -20,11 +20,13 @@ class AppTheme {
       onError: AppColors.cream,
     );
 
+    final textTheme = createAppTextTheme();
+
     return ThemeData(
       useMaterial3: true,
       colorScheme: colorScheme,
       scaffoldBackgroundColor: AppColors.cream,
-      textTheme: createAppTextTheme(),
+      textTheme: textTheme,
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.cream,
         foregroundColor: AppColors.espresso,
@@ -56,6 +58,21 @@ class AppTheme {
           side: const BorderSide(
             color: AppColors.espresso,
             width: AppSizes.outlineWidth,
+          ),
+        ),
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        backgroundColor: AppColors.cream,
+        indicatorColor: AppColors.terracotta,
+        elevation: 0,
+        height: 72,
+        iconTheme: const WidgetStatePropertyAll(
+          IconThemeData(color: AppColors.espresso),
+        ),
+        labelTextStyle: WidgetStatePropertyAll(
+          textTheme.labelSmall?.copyWith(
+            color: AppColors.espresso,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
