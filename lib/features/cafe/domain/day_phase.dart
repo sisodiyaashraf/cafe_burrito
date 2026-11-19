@@ -12,7 +12,7 @@ DayPhase dayPhaseAt(double secondsIntoDay) {
     return DayPhase.morning;
   }
   final normalized = secondsIntoDay % GameConstants.dayLengthSeconds;
-  final phaseDuration =
+  const phaseDuration =
       GameConstants.dayLengthSeconds / GameConstants.dayPhaseCount;
   final index = (normalized / phaseDuration).floor();
 

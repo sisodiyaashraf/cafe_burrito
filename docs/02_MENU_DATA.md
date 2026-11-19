@@ -60,4 +60,25 @@ lunch: sandwich x2, burrito x2, pizza x2
 evening: bakery x2, cake x2
 night: all categories x1.2
 
+## Station Costs (unlockCost and baseUpgradeCost)
+station id | display name | category | unlockCost | baseUpgradeCost
+espresso_bar | Espresso Bar | hot_coffee | 0 | 10
+cold_drinks_bar | Cold Drinks Bar | cold_drink | 500 | 250
+sandwich_grill | Sandwich Grill | sandwich | 4000 | 2000
+burrito_wrap_table | Burrito Wrap Table | burrito | 30000 | 15000
+pizza_oven | Pizza Oven | pizza | 250000 | 125000
+bakery | Bakery | bakery | 2000000 | 1000000
+cake_display | Cake Display | cake | 15000000 | 7500000
+
+## Station IDs (7)
+espresso_bar, cold_drinks_bar, sandwich_grill, burrito_wrap_table, pizza_oven, bakery, cake_display
+
+## Item IDs (28)
+espresso, americano, cappuccino, latte, cold_coffee, iced_latte, frappe, cold_brew, grilled_cheese, egg_sandwich, club_sandwich, veggie_melt, veg_burrito, chicken_burrito, breakfast_burrito, loaded_burrito, margherita_slice, pepperoni_slice, veggie_slice, cheese_burst_slice, choc_chip_cookie, oatmeal_cookie, croissant, cinnamon_roll, brownie, choc_cake_slice, cheesecake, red_velvet_slice
+
+## Asset Naming Conventions
+- Menu item icon: item_<id>.png (e.g. assets/images/items/item_cappuccino.png)
+- Station room background: room_<stationId>.png (e.g. assets/images/rooms/room_espresso_bar.png)
+- Regular customer: customer_<regularId>.png (e.g. assets/images/characters/customer_mocha_dog.png)
+
 Rule: menu and regulars must be defined as data (const Dart lists/maps), never hardcoded inside widgets or components.

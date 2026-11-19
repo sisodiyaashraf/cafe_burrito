@@ -24,7 +24,7 @@ Each station has 4 menu items (see 02_MENU_DATA.md), its own barista, a level, a
 ## Unique features (all must be in v1.0)
 1. Order bubbles and combos: if a customer orders two items from different categories, serving both within 10 seconds gives a combo bonus (x1.5 payout).
 2. Time-of-day rushes: an in-game day lasts 8 real minutes split into Morning (coffee x2), Lunch (sandwich, burrito, pizza x2), Evening (bakery and cake x2), Night (all x1.2, cozy lights). The scene tint changes with the time of day using color overlays only.
-3. Regulars album: 8 named animal regulars, each with a favorite item. Serving their favorite gives 3x tip and relationship points. Relationship levels 1 to 5 give small permanent bonuses. A Regulars screen shows the collection.
+3. Regulars album: 8 named animal regulars, each with a favorite item. Serving their favorite gives 3x tip and relationship points. Relationship levels 1 to 5 give small permanent bonuses (+2% income per level; thresholds: [10, 30, 70, 150, 300] points). A normal serve gives 1 point and a favorite serve gives 3. A Regulars screen shows the collection.
 4. Burrito the cat: tap Burrito to trigger a short "double tap income" boost (30 seconds, 10 minute cooldown).
 
 ## Progression

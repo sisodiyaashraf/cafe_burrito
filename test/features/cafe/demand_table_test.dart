@@ -8,7 +8,7 @@ void main() {
   group('demandMultiplier', () {
     test('checks all 28 category and phase combinations', () {
       final rush = GameConstants.rushDemandMultiplier.toDouble();
-      final night = GameConstants.nightDemandMultiplier;
+      const night = GameConstants.nightDemandMultiplier;
 
       const morningRush = {
         ItemCategory.hotCoffee,

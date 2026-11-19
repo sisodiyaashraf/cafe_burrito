@@ -2,9 +2,32 @@
 - [x] Step 0: Documentation
 - [x] Step 1: Project setup
 - [x] Step 2: App shell, bottom navigation, HUD
+- [x] Step 3: Domain models and menu data
 (Update this checklist after every step. Add notes about decisions and known issues below.)
 
 ## Notes
+### Step 3 Decisions & Details
+- Station baseUpgradeCost values added:
+  - `espresso_bar`: 10
+  - `cold_drinks_bar`: 250
+  - `sandwich_grill`: 2000
+  - `burrito_wrap_table`: 15000
+  - `pizza_oven`: 125000
+  - `bakery`: 1000000
+  - `cake_display`: 7500000
+- Regular relationship progression constants added to `GameConstants`:
+  - `regularRelationshipThresholds`: `[10, 30, 70, 150, 300]` points for levels 1..5
+  - `regularBonusPerLevel`: 0.02 (+2% income per level)
+  - `regularPointsPerServe`: 1 point
+  - `regularPointsPerFavoriteServe`: 3 points
+- Created pure Dart domain entities and interfaces with zero Flutter/Flame dependencies:
+  - `ItemCategory`, `MenuItem`, `StationDefinition`, `Regular`, `DayPhase`, `demandMultiplier`.
+  - Interfaces: `MenuRepository`, `RegularsRepository`.
+  - Const implementations: `ConstMenuRepository`, `ConstRegularsRepository` with O(1) cached lookup maps and test injection support.
+- Split station definitions into individual files under `lib/features/menu/data/stations/` for maintainability and small file sizes.
+- Added `AssetPaths` helper in `lib/core/constants/asset_paths.dart` and migrated `HudBar` to use its constants.
+- Updated documentation files `docs/01_GAME_DESIGN.md` and `docs/02_MENU_DATA.md` with the new tables and conventions.
+
 ### Step 2.5 Decisions & Details
 - Fonts bundled offline in `assets/fonts/` and declared in `pubspec.yaml`:
   - `assets/fonts/LilitaOne-Regular.ttf` (family: `LilitaOne`)
