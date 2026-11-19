@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:cafe_burrito/core/constants/app_sizes.dart';
+import 'package:cafe_burrito/core/constants/asset_paths.dart';
 import 'package:cafe_burrito/core/theme/app_colors.dart';
 import 'package:cafe_burrito/features/hud/presentation/currency_pill.dart';
 import 'package:cafe_burrito/features/hud/presentation/settings_button.dart';
@@ -28,7 +29,7 @@ class HudBar extends StatelessWidget {
           Expanded(
             child: CurrencyPill(
               amount: coins,
-              assetPath: 'assets/images/ui/ui_coin.png',
+              assetPath: AssetPaths.coinIcon,
               fallbackIcon: Icons.monetization_on_rounded,
               fallbackColor: AppColors.caramel,
               semanticLabel: 'Coins',
@@ -38,7 +39,7 @@ class HudBar extends StatelessWidget {
           Expanded(
             child: CurrencyPill(
               amount: goldenBeans,
-              assetPath: 'assets/images/ui/ui_golden_bean.png',
+              assetPath: AssetPaths.goldenBeanIcon,
               fallbackIcon: Icons.coffee_rounded,
               fallbackColor: AppColors.berry,
               semanticLabel: 'Golden Beans',
