@@ -4,6 +4,7 @@ class GameConstants {
   static const double upgradeCostMultiplier = 1.15;
   static const int maxOfflineSeconds = 7200;
   static const int dayLengthSeconds = 480;
+  static const int dayPhaseCount = 4;
   static const int comboWindowSeconds = 10;
   static const double comboPayoutMultiplier = 1.5;
   static const int regularFavoriteTipMultiplier = 3;
@@ -15,4 +16,8 @@ class GameConstants {
   static const int burritoBoostCooldownSeconds = 600;
   static const int stationCount = 7;
   static const int itemsPerStation = 4;
+  static const List<int> regularRelationshipThresholds = [10, 30, 70, 150, 300];
+  static const double regularBonusPerLevel = 0.02;
+  static const int regularPointsPerServe = 1;
+  static const int regularPointsPerFavoriteServe = 3;
 }
