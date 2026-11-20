@@ -6,6 +6,11 @@
 (Update this checklist after every step. Add notes about decisions and known issues below.)
 
 ## Notes
+### Step 3.5 Decisions & Details
+- Added asset license tracker in `docs/07_ASSET_LICENSES.md` to audit licenses for all external and AI-generated assets.
+- Added hard rule 11 to `docs/04_ARCHITECTURE_AND_RULES.md` requiring every asset added to `assets/` to be documented in `docs/07_ASSET_LICENSES.md` in the same commit.
+- Pre-filled starting entries for offline bundled fonts (`LilitaOne`, `Nunito`) under SIL OFL 1.1.
+
 ### Step 3 Decisions & Details
 - Station baseUpgradeCost values added:
   - `espresso_bar`: 10
