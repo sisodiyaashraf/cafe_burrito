@@ -43,3 +43,7 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Raw art assets (raw AI output not committed)
+art_raw/*
+!art_raw/**/.gitkeep
