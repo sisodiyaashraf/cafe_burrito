@@ -37,6 +37,7 @@ lib/
 8. Domain logic must have unit tests.
 9. Never rewrite unrelated files. Make the smallest change that solves the task.
 10. After each step: list created and changed files, how to run, how to test, and update docs/06_PROGRESS.md.
+11. Every asset added to assets/ must be logged in docs/07_ASSET_LICENSES.md in the same commit.
 
 ## Git
 Commit after each step with message: `step-N: short description`.
