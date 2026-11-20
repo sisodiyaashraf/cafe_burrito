@@ -6,6 +6,13 @@
 (Update this checklist after every step. Add notes about decisions and known issues below.)
 
 ## Notes
+### Step 3.6 Decisions & Details
+- Created asset processing toolchain in `tools/process_assets.py` with Pillow and optional rembg integration.
+- Supports background removal, transparent padding/margin, center-crop for aspect ratios, and format validation (`--check` mode).
+- Configured `art_raw/` for raw art inputs with subdirectories (`rooms`, `characters`, `items`, `ui`), keeping raw art files out of git via `.gitignore`.
+- Added pytest test suite in `tools/test_process_assets.py` covering crop, padding, resize, filename sanitization, and checker logic.
+- Updated `docs/04_ARCHITECTURE_AND_RULES.md` documenting that `tools/` is outside the Flutter application and `art_raw/` is kept out of git.
+
 ### Step 3.5 Decisions & Details
 - Added asset license tracker in `docs/07_ASSET_LICENSES.md` to audit licenses for all external and AI-generated assets.
 - Added hard rule 11 to `docs/04_ARCHITECTURE_AND_RULES.md` requiring every asset added to `assets/` to be documented in `docs/07_ASSET_LICENSES.md` in the same commit.

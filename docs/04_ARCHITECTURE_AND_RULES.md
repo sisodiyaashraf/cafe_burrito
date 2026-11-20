@@ -20,6 +20,8 @@ lib/
 - domain: entities and pure logic (no Flutter or Flame imports).
 - data: repositories, Hive storage, const menu data.
 - presentation: widgets, Flame components, ChangeNotifier state classes.
+- tools/: asset processing toolchain outside the Flutter app.
+- art_raw/: raw art sources kept out of git (ignored via .gitignore, only .gitkeep committed).
 
 ## Responsibility split
 - Flame = the world: station rooms, baristas, customers, item movement, particles.
